@@ -16,10 +16,13 @@ def register():
     '''
     data = request.get_json()
     print(data)
-    dirs = data['dir']
-    name = data['name']
+    userName = data['userName']
+    password = data['password']
+    helloCode = data['helloCode']
+    if helloCode != '000000':
+        return Response_headers(json.dumps({'data':'邀请码错误'}))
     OKdb = mydb()
-    outdata = OKdb.sys_userInfo('数据data')
+    outdata = OKdb.sys_userInfo({'userName': userName, 'password': password})
     return Response_headers(json.dumps({'data':outdata}))
 
 # 登录

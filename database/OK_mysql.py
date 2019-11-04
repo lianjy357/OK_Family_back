@@ -32,7 +32,6 @@ class mydb():
             .format(DBsetting['DatabaseType'], DBsetting['API'], DBsetting['Username'], DBsetting['Password'], DBsetting['IP'], DBsetting['Port'], DBsetting['DatabaseName']))
     def sys_userInfo(self, database):
         # 单条数据
-        print(database)
-        user = {"username": "lianjy", "password": 20, "nickname": "sally"}
-        self.db.query('INSERT INTO sys_userInfo(username,password,nickname) values (:username, :password, :nickname)', **user)
-        return '成功加入' + database
+        user = database
+        self.db.query('INSERT INTO sys_userInfo(username,password) values (:userName, :password)', **user)
+        return database
