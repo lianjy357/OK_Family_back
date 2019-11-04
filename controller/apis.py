@@ -1,20 +1,37 @@
 from __init__ import APP
 from __init__ import render_template, request, Response
 from __init__ import Response_headers
+from database.OK_mysql import mydb
 import json
 
 @APP.route("/")
 def home():
   return render_template('index.html')
 
-# 登录请求
+# 注册
+@APP.route('/register',methods=['POST'])
+def register():
+    '''
+        注册请求
+    '''
+    data = request.get_json()
+    print(data)
+    dirs = data['dir']
+    name = data['name']
+    OKdb = mydb()
+    outdata = OKdb.sys_userInfo('数据data')
+    return Response_headers(json.dumps({'data':outdata}))
+
+# 登录
 @APP.route('/login',methods=['POST'])
-def run():
+def login():
     '''
         登录请求
     '''
+    
     # data = request.get_json()
     # dirs = data['dir']
     # name = data['name']
-    outdata = 'hello world！'
+    OKdb = mydb()
+    outdata = OKdb.sys_userInfo('数据data')
     return Response_headers(json.dumps({'data':outdata}))
