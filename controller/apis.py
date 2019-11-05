@@ -1,6 +1,6 @@
 from __init__ import APP
 from __init__ import render_template, request, Response
-from __init__ import Response_headers
+from utils import http
 from database.OK_mysql import mydb
 import json
 
@@ -18,12 +18,16 @@ def register():
     print(data)
     userName = data['userName']
     password = data['password']
-    helloCode = data['helloCode']
+    helloCode = data['helloCode'] if 'helloCode' in data else ""
     if helloCode != '000000':
-        return Response_headers(json.dumps({'data':'邀请码错误'}))
+        return http.send(10001)
+    params = {
+        'username': userName,
+        'password': password
+    }
     OKdb = mydb()
-    outdata = OKdb.sys_userInfo({'userName': userName, 'password': password})
-    return Response_headers(json.dumps({'data':outdata}))
+    return OKdb.sys_userInfo(params)
+    
 
 # 登录
 @APP.route('/login',methods=['POST'])

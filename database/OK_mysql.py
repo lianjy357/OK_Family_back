@@ -1,8 +1,7 @@
 import records
 import json
 
-
-
+from utils import http
 
 # 创建表的sql
 # create_sql = """CREATE TABLE IF NOT EXISTS user_deo(
@@ -20,8 +19,8 @@ import json
 # users = [{"username": "yuze5", "password": 20, "nickname": "sally"},{"username": "yuze5", "password": 20, "nickname": "sally"}]
 # db.bulk_query('INSERT INTO sys_userInfo(username,password,nickname) values (:username, :password, :nickname)', users)
 
-# 数据库对象
-class mydb():
+# 请求数据库对象
+class ASKDB:
     def __init__(self):
         # 获取配置信息
         with open("setting.json",'r', encoding='utf-8') as load_f:
@@ -30,8 +29,35 @@ class mydb():
         DBsetting = load_dict['DB']
         self.db = records.Database('{0}+{1}://{2}:{3}@{4}:{5}/{6}'\
             .format(DBsetting['DatabaseType'], DBsetting['API'], DBsetting['Username'], DBsetting['Password'], DBsetting['IP'], DBsetting['Port'], DBsetting['DatabaseName']))
+    
+    '''
+        保存数据insert（单条）
+        输入：
+        libname: 库表名称
+        database: 写入的数据
+        输出：null
+    '''
+    def insert_one(self, libname,database):
+        try:
+            # 获取Key值
+            keys = database.keys()
+            dbkeys = ",".join(str(i) for i in keys) # 数据库key值
+            dbvalues = ",".join(':'+ str(i) for i in keys) # 数据库key值
+            SQLling = 'INSERT INTO {0}({1}) values ({2})'\
+                .format(libname, dbkeys, dbvalues)
+            take = self.db.query( SQLling, **database )
+            print('查看一下数据')
+            print(str(take))
+        except:
+            return [30001]
+        else:
+            return [10000]
+
+# 整理成数据库请求结构
+class mydb():
+    # 用户信息表
     def sys_userInfo(self, database):
         # 单条数据
         user = database
-        self.db.query('INSERT INTO sys_userInfo(username,password) values (:userName, :password)', **user)
-        return database
+        getdb = ASKDB().insert_one('sys_userInfo',user)
+        return http.send(getdb[0])
