@@ -1,8 +1,21 @@
 from flask import Flask, render_template, request, Response
 from flask_cors import CORS
+from flask_httpauth import HTTPTokenAuth
 import json
 
 APP = Flask(__name__)
+auth = HTTPTokenAuth(scheme='Bearer')
+
+# class HTTPTokenAuth(HTTPAuth):
+#     def __init__(self, scheme='Bearer', realm=None):
+#         super(HTTPTokenAuth, self).__init__(scheme, realm)
+#         self.verify_token_callback = None
+#     def verify_token(self, f):
+#         self.verify_token_callback = f
+#         return f
+#     def authenticate(self, auth, stored_passwrd):
+#         if auth:
+#             token = auth[]
 
 CORS(APP)
 

@@ -1,8 +1,19 @@
 from __init__ import APP
 from __init__ import render_template, request, Response
 from utils import http
-from database.OK_mysql import mydb
+from werkzeug.security import generate_password_hash,check_password_hash
+
 import json
+
+from database.OK_mysql import mydb
+
+
+# 密码hash
+def hash_password(password):
+    return generate_password_hash(password)
+# 密码匹配()
+def verify_password(password, password_hash):
+    return check_password_hash(password, password_hash) # True or False
 
 @APP.route("/")
 def home():
@@ -21,9 +32,10 @@ def register():
     helloCode = data['helloCode'] if 'helloCode' in data else ""
     if helloCode != '000000':
         return http.send(10001)
+    
     params = {
         'username': userName,
-        'password': password
+        'password': hash_password(password)
     }
     OKdb = mydb()
     return OKdb.sys_userInfo(params)

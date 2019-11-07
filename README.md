@@ -9,6 +9,8 @@ flask_cors
 records
 mysqlclient
 pymysql
+passlib
+flask-httpauth
 
 ## configure
 
