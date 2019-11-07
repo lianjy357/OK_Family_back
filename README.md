@@ -11,6 +11,7 @@ mysqlclient
 pymysql
 passlib
 flask-httpauth
+itsdangerous
 
 ## configure
 
@@ -49,4 +50,3 @@ DB：数据库配置
   - `apis.py` 只作为数据接收，只处理一些简单的数据请求问题，将所有逻辑交给
 - `database` 所有的数据库请求
   - `OK_mysql.py` 数据库配置信息
-- 
