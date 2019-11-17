@@ -26,7 +26,6 @@ def register():
         注册请求
     '''
     data = request.get_json()
-    print(data)
     userName = data['userName']
     password = data['password']
     helloCode = data['helloCode'] if 'helloCode' in data else ""
@@ -37,8 +36,7 @@ def register():
         'username': userName,
         'password': hash_password(password)
     }
-    OKdb = mydb()
-    return OKdb.sys_userInfo(params)
+    return mydb().sys_userInfo_register(params)
     
 
 # 登录
@@ -48,9 +46,12 @@ def login():
         登录请求
     '''
     
-    # data = request.get_json()
-    # dirs = data['dir']
-    # name = data['name']
-    OKdb = mydb()
-    outdata = OKdb.sys_userInfo('数据data')
-    return Response_headers(json.dumps({'data':outdata}))
+    data = request.get_json()
+    username = data['username']
+    password = data['password']
+    params = {
+        'username': username,
+        'password': hash_password(password)
+    }
+    return mydb().sys_userInfo_login(params)
+    

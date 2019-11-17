@@ -10,7 +10,7 @@ records
 mysqlclient
 pymysql
 passlib
-flask-httpauth
+flask_httpauth
 itsdangerous
 
 ## configure
