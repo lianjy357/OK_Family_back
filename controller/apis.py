@@ -31,7 +31,6 @@ def register():
     helloCode = data['helloCode'] if 'helloCode' in data else ""
     if helloCode != '000000':
         return http.send(10001)
-    
     params = {
         'username': userName,
         'password': hash_password(password)
@@ -45,13 +44,27 @@ def login():
     '''
         登录请求
     '''
-    
     data = request.get_json()
     username = data['username']
     password = data['password']
     params = {
         'username': username,
-        'password': hash_password(password)
+        'password': password
     }
     return mydb().sys_userInfo_login(params)
+
+# 获取用户信息
+@APP.route('/getUserInfo',methods=['POST'])
+def getUserInfo():
+    '''
+        获取用户信息
+    '''
+    data = request.get_json()
+    username = data['username']
+    password = data['password']
+    params = {
+        'username': username,
+        'password': password
+    }
+    return mydb().sys_userInfo_get(params)
     

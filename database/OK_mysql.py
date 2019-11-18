@@ -1,5 +1,6 @@
 import records
 import json
+from werkzeug.security import generate_password_hash,check_password_hash
 
 from utils import http
 
@@ -46,8 +47,7 @@ class ASKDB:
             SQLling = 'INSERT INTO {0}({1}) values ({2})'\
                 .format(table_name, dbkeys, dbvalues)
             take = self.db.query( SQLling, **database )
-            print('查看一下数据')
-            print(str(take))
+            print(take.all(as_dict=True))
         except:
             return [30001]
         else:
@@ -64,10 +64,8 @@ class ASKDB:
         try:
             SQLling = 'SELECT * FROM {0} WHERE {1}'\
                 .format(table_name, condition)
-            print(SQLling)
             take = self.db.query( SQLling )
-            print('查看一下数据')
-            print(take.all(as_dict=True))
+            return take.one() # 获取一条数据
         except:
             return [30001]
         else:
@@ -86,6 +84,25 @@ class mydb():
         # 单条数据
         username = database['username']
         password = database['password']
-        sqllang = "username='{0}' and password='{1}'".format(username, password)
+        sqllang = "username='{0}'".format(username)
         getdb = ASKDB().select_one('sys_userInfo',sqllang)
-        return http.send(getdb[0])
+        if getdb == None:
+            return http.send(10002)
+        if check_password_hash(getdb.password, password):
+            dbData = dict(getdb)
+            del dbData['password'] # 删除密码
+            return http.send(10000, dbData)
+        else:
+            return http.send(10003)
+    # 获取用户信息
+    def sys_userInfo_get(self, database):
+        # 单条数据
+        username = database['username']
+        sqllang = "username='{0}'".format(username)
+        getdb = ASKDB().select_one('sys_userInfo',sqllang)
+        if getdb == None:
+            return http.send(10004)
+        dbData = dict(getdb)
+        del dbData['password'] # 删除密码
+        return http.send(10000, dbData)
+        
