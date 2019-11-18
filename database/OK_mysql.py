@@ -71,6 +71,25 @@ class ASKDB:
         else:
             return [10000]
 
+    '''
+        查询数据select（多条,一对多结构）
+        输入：
+        select_name: 输出查询结果
+        table_name: 库表名称（多库表，逗号隔开）
+        condition: 查询条件及其关联条件（允许组合条件）
+        输出：null
+    '''
+    def select_all(self, select_name, table_name, condition):
+        try:
+            SQLling = 'SELECT {0} FROM {1} WHERE {2}'\
+                .format(select_name, table_name, condition)
+            take = self.db.query( SQLling )
+            return take.all() # 获取一条数据
+        except:
+            return [30001]
+        else:
+            return [10000]
+
 # 整理成数据库请求结构
 class mydb():
     # 注册用户信息
@@ -100,6 +119,18 @@ class mydb():
         username = database['username']
         sqllang = "username='{0}'".format(username)
         getdb = ASKDB().select_one('sys_userInfo',sqllang)
+        if getdb == None:
+            return http.send(10004)
+        dbData = dict(getdb)
+        del dbData['password'] # 删除密码
+        return http.send(10000, dbData)
+    # 获取OKR信息
+    def okr_okr_get(self, database):
+        # 单条数据
+        # username = database['username']
+        # sqllang = "username='{0}'".format(username)
+        # sqllang = "okr_objectives.id=okr_keyresults.oid".format(username)
+        getdb = ASKDB().select_all('okr_objectives,(SELECT group_concat(okr_keyresults)) KR',sqllang)
         if getdb == None:
             return http.send(10004)
         dbData = dict(getdb)
