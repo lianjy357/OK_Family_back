@@ -43,15 +43,36 @@ class ASKDB:
             # 获取Key值
             keys = database.keys()
             dbkeys = ",".join(str(i) for i in keys) # 数据库key值
-            dbvalues = ",".join(':'+ str(i) for i in keys) # 数据库key值
+            dbvalues = ",".join(':'+ str(i) for i in keys) # 数据库value值
             SQLling = 'INSERT INTO {0}({1}) values ({2})'\
                 .format(table_name, dbkeys, dbvalues)
             take = self.db.query( SQLling, **database )
+        except:
+            return 30001
+        else:
+            return 10000
+
+    '''
+        保存数据insert（多条）
+        输入：
+        table_name: 库表名称
+        database: 写入的数据
+        输出：null
+    '''
+    def insert_all(self, table_name,database):
+        try:
+            # 获取Key值
+            keys = database.keys()
+            dbkeys = ",".join(str(i) for i in keys) # 数据库key值
+            dbvalues = ",".join(':'+ str(i) for i in keys) # 数据库value值
+            SQLling = 'INSERT INTO {0}({1}) values ({2})'\
+                .format(table_name, dbkeys, dbvalues)
+            take = self.db.bulk_query( SQLling, database )
             print(take.all(as_dict=True))
         except:
-            return [30001]
+            return 30001
         else:
-            return [10000]
+            return 10000
     
     '''
         查询数据select（单条）
@@ -67,9 +88,9 @@ class ASKDB:
             take = self.db.query( SQLling )
             return take.one() # 获取一条数据
         except:
-            return [30001]
+            return 30002
         else:
-            return [10000]
+            return 10000
 
     '''
         查询数据select（多条,一对多结构）
@@ -81,14 +102,16 @@ class ASKDB:
     '''
     def select_all(self, select_name, table_name, condition):
         try:
-            SQLling = 'SELECT {0} FROM {1} WHERE {2}'\
+            if (condition != ''):
+                condition = 'WHERE '+ condition
+            SQLling = 'SELECT {0} FROM {1} {2}'\
                 .format(select_name, table_name, condition)
             take = self.db.query( SQLling )
-            return take.all() # 获取一条数据
+            return take.all(as_dict=True) # 获取所有数据
         except:
-            return [30001]
+            return 30002
         else:
-            return [10000]
+            return 10000
 
 # 整理成数据库请求结构
 class mydb():
@@ -97,7 +120,7 @@ class mydb():
         # 单条数据
         user = database
         getdb = ASKDB().insert_one('sys_userInfo',user)
-        return http.send(getdb[0])
+        return http.send(getdb)
     # 登录用户获取信息
     def sys_userInfo_login(self, database):
         # 单条数据
@@ -126,14 +149,28 @@ class mydb():
         return http.send(10000, dbData)
     # 获取OKR信息
     def okr_okr_get(self, database):
-        # 单条数据
         # username = database['username']
         # sqllang = "username='{0}'".format(username)
         # sqllang = "okr_objectives.id=okr_keyresults.oid".format(username)
-        getdb = ASKDB().select_all('okr_objectives,(SELECT group_concat(okr_keyresults)) KR',sqllang)
-        if getdb == None:
-            return http.send(10004)
-        dbData = dict(getdb)
-        del dbData['password'] # 删除密码
-        return http.send(10000, dbData)
+        getdb = ASKDB().select_all('*','okr_objectives', '')
+        if (getdb == 30002):
+            return http.send(30002)
+        # 再次查表获取KR信息
+        for o in getdb:
+            getkrdb = ASKDB().select_all('*','okr_keyresults', 'oid=' + str(o['id']))
+            o['KR'] = getkrdb
+        return http.send(10000, getdb)
+    # 创建OKR信息
+    def okr_okr_save(self, database):
+        # username = database['username']
+        # sqllang = "username='{0}'".format(username)
+        # sqllang = "okr_objectives.id=okr_keyresults.oid".format(username)
+        getdb = ASKDB().select_all('*','okr_objectives', '')
+        if (getdb == 30002):
+            return http.send(30002)
+        # 再次查表获取KR信息
+        for o in getdb:
+            getkrdb = ASKDB().select_all('*','okr_keyresults', 'oid=' + str(o['id']))
+            o['KR'] = getkrdb
+        return http.send(10000, getdb)
         

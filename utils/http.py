@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 # http请求之后，对数据进行包装后再发出请求
 from __init__ import Response_headers
+import datetime
 import json
 
 CODE = {
@@ -28,13 +29,22 @@ CODE = {
 
     # 数据库层异常
     30001: '保存失败',
+    30002: '查询失败',
     #系统层异常
     40001: '系统异常',
 }
+# 时间处理
+class DateEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj,datetime.date):
+            return obj.strftime("%Y-%m-%d")
+        else:
+            return json.JSONEncoder.default(self,obj)
+
 
 # 返回数据封装
 def send(code,data=''):
     if data != '':
-        return Response_headers(json.dumps({'code': code, 'data': data, 'msg': CODE[code]}))
+        return Response_headers(json.dumps({'code': code, 'data': data, 'msg': CODE[code]},cls=DateEncoder))
     else:
         return Response_headers(json.dumps({'code': code, 'msg': CODE[code]}))

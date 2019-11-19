@@ -69,16 +69,16 @@ def getUserInfo():
     return mydb().sys_userInfo_get(params)
     
 # 获取OKR信息
-@APP.route('/getOKRInfo',methods=['POST'])
-def getUserInfo():
+@APP.route('/getOKRInfo',methods=['GET'])
+def getOKRInfo():
     '''
         获取OKR信息
     '''
-    data = request.get_json()
-    username = data['username']
-    password = data['password']
+    # data = request.get_json()
+    # username = data['username']
+    # password = data['password']
     params = {
-        'username': username,
-        'password': password
+        # 'username': username,
+        # 'password': password
     }
-    return mydb().sys_userInfo_get(params)
+    return mydb().okr_okr_get(params)
