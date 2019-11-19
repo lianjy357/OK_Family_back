@@ -82,3 +82,27 @@ def getOKRInfo():
         # 'password': password
     }
     return mydb().okr_okr_get(params)
+
+# 保存OKR信息
+@APP.route('/saveOKRInfo',methods=['POST'])
+def saveOKRInfo():
+    '''
+        获取OKR信息
+    '''
+    data = request.get_json()
+    
+    # username = data['username']
+    # password = data['password']
+    params = {
+        'type': data['type'],
+        'title': data['title'],
+        'description': data['description'],
+        'startdate': data['startDate'],
+        'enddate': data['endDate'],
+        'progress': data['progress'],
+        'person': str(data['person']),
+        'type': data['type'],
+        'username': data['username'],
+        'KR': data['KR']
+    }
+    return mydb().okr_okr_save(params)

@@ -1,5 +1,7 @@
 import records
 import json
+import random
+import string
 from werkzeug.security import generate_password_hash,check_password_hash
 
 from utils import http
@@ -47,7 +49,9 @@ class ASKDB:
             SQLling = 'INSERT INTO {0}({1}) values ({2})'\
                 .format(table_name, dbkeys, dbvalues)
             take = self.db.query( SQLling, **database )
-        except:
+            # return take.one()
+        except Exception as ex:
+            print("出现如下异常%s"%ex)
             return 30001
         else:
             return 10000
@@ -62,18 +66,17 @@ class ASKDB:
     def insert_all(self, table_name,database):
         try:
             # 获取Key值
-            keys = database.keys()
+            keys = database[0].keys()
             dbkeys = ",".join(str(i) for i in keys) # 数据库key值
             dbvalues = ",".join(':'+ str(i) for i in keys) # 数据库value值
             SQLling = 'INSERT INTO {0}({1}) values ({2})'\
                 .format(table_name, dbkeys, dbvalues)
-            take = self.db.bulk_query( SQLling, database )
-            print(take.all(as_dict=True))
-        except:
+            self.db.bulk_query( SQLling, database )
+        except Exception as ex:
+            print("出现如下异常%s"%ex)
             return 30001
         else:
             return 10000
-    
     '''
         查询数据select（单条）
         输入：
@@ -108,7 +111,8 @@ class ASKDB:
                 .format(select_name, table_name, condition)
             take = self.db.query( SQLling )
             return take.all(as_dict=True) # 获取所有数据
-        except:
+        except Exception as ex:
+            print("出现如下异常%s"%ex)
             return 30002
         else:
             return 10000
@@ -157,20 +161,24 @@ class mydb():
             return http.send(30002)
         # 再次查表获取KR信息
         for o in getdb:
-            getkrdb = ASKDB().select_all('*','okr_keyresults', 'oid=' + str(o['id']))
+            getkrdb = ASKDB().select_all('*','okr_keyresults', "ranid='%s'"%(o['ranid']))
             o['KR'] = getkrdb
         return http.send(10000, getdb)
     # 创建OKR信息
     def okr_okr_save(self, database):
-        # username = database['username']
-        # sqllang = "username='{0}'".format(username)
-        # sqllang = "okr_objectives.id=okr_keyresults.oid".format(username)
-        getdb = ASKDB().select_all('*','okr_objectives', '')
-        if (getdb == 30002):
-            return http.send(30002)
-        # 再次查表获取KR信息
-        for o in getdb:
-            getkrdb = ASKDB().select_all('*','okr_keyresults', 'oid=' + str(o['id']))
-            o['KR'] = getkrdb
-        return http.send(10000, getdb)
+        # 单条数据
+        ranid = ''.join(random.sample(string.ascii_letters + string.digits, 16))
+        kr = database.pop('KR')
+        for item in kr:
+            item['ranid'] = ranid
+        o = database
+        database['ranid'] = ranid
+        getdb = ASKDB().insert_one('okr_objectives',o)
+        if (getdb == 30001):
+            return http.send(30001)
+        getdb = ASKDB().insert_all('okr_keyresults',kr)
+        if (getdb == 30001):
+            return http.send(30001)
+        
+        return http.send(10000)
         
