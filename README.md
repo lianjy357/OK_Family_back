@@ -12,6 +12,7 @@ pymysql
 passlib
 flask_httpauth
 itsdangerous
+uwsgi
 
 ## configure
 
