@@ -3,4 +3,6 @@
 from __init__ import APP
 
 if __name__ == '__main__':
-    APP.run(debug=True, host='0.0.0.0')
+    from werkzeug.contrib.fixers import ProxyFix
+    APP.wsgi_app = ProxyFix(APP.wsgi_app)
+    APP.run(debug=False, host='0.0.0.0')
