@@ -116,6 +116,24 @@ class ASKDB:
             return 30002
         else:
             return 10000
+    '''
+        更新数据update（单条）
+        输入：
+        table_name: 库表名称
+        updata_dade: 需要修改的内容（允许多个参数）
+        condition: 查询条件（允许组合条件）
+        输出：null
+    '''
+    def update_one(self, table_name, condition):
+        try:
+            SQLling = 'UPDATE {0} SET {1} WHERE {2}'\
+                .format(table_name, condition)
+            take = self.db.query( SQLling )
+            return take.one() # 获取一条数据
+        except:
+            return 30002
+        else:
+            return 10000
 
 # 整理成数据库请求结构
 class mydb():
