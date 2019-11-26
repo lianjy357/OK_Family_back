@@ -106,3 +106,39 @@ def saveOKRInfo():
         'KR': data['KR']
     }
     return mydb().okr_okr_save(params)
+
+# 修改OKR进度
+@APP.route('/updataOKRprogress',methods=['POST'])
+def updataOKRprogress():
+    '''
+        修改OKR进度
+    '''
+    data = request.get_json()
+    # username = data['username']
+    # password = data['password']
+    kr = []
+    for krdata in data['KR']:
+        par = {
+            'id': krdata['id'],
+            'progress': krdata['progress'],
+            'confidenceNum': krdata['confidenceNum']
+        }
+        kr.append(par)
+    params = {
+        'ranid': data['ranid'],
+        'KR': kr
+    }
+    return mydb().okr_okrprogress_updata(params)
+
+# 删除OKR
+@APP.route('/deleteOKR',methods=['POST'])
+def deleteOKR():
+    '''
+        修改OKR进度
+    '''
+    data = request.get_json()
+    
+    params = {
+        'ranid': data['ranid']
+    }
+    return mydb().okr_okr_delete(params)

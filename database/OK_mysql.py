@@ -120,17 +120,34 @@ class ASKDB:
         更新数据update（单条）
         输入：
         table_name: 库表名称
-        updata_dade: 需要修改的内容（允许多个参数）
+        updata_date: 需要修改的内容（允许多个参数）
         condition: 查询条件（允许组合条件）
         输出：null
     '''
-    def update_one(self, table_name, condition):
+    def update_one(self, table_name, updata_date, condition):
         try:
             SQLling = 'UPDATE {0} SET {1} WHERE {2}'\
+                .format(table_name, updata_date, condition)
+            take = self.db.query( SQLling )
+        except Exception as ex:
+            print("出现如下异常%s"%ex)
+            return 30002
+        else:
+            return 10000
+    '''
+        删除数据delete（单条）
+        输入：
+        table_name: 库表名称
+        condition: 查询条件（允许组合条件）
+        输出：null
+    '''
+    def delete_one(self, table_name, condition):
+        try:
+            SQLling = 'DELETE FROM {0} WHERE {1}'\
                 .format(table_name, condition)
             take = self.db.query( SQLling )
-            return take.one() # 获取一条数据
-        except:
+        except Exception as ex:
+            print("出现如下异常%s"%ex)
             return 30002
         else:
             return 10000
@@ -197,6 +214,24 @@ class mydb():
         getdb = ASKDB().insert_all('okr_keyresults',kr)
         if (getdb == 30001):
             return http.send(30001)
-        
+        return http.send(10000)
+    # 修改OKR进度
+    def okr_okrprogress_updata(self, database):
+        krpronum = 0 # kr进度总数
+        krnum = 0 # kr个数
+        for kr in database['KR']:
+            ASKDB().update_one('okr_keyresults', "progress='%f',confidenceNum='%s'"%(float(kr['progress']),kr['confidenceNum']), "id='%f'"%(kr['id']))
+            krpronum = krpronum + float(kr['progress'])
+            krnum = krnum + 1
+        getdb = ASKDB().update_one('okr_objectives',"progress='%s'"%(str(krpronum / krnum)), "ranid='%s'"%(database['ranid']))
+        if (getdb == 30001):
+            return http.send(30001)
+        return http.send(10000)
+    # 删除OKR
+    def okr_okr_delete(self, database):
+        ASKDB().delete_one('okr_keyresults', "ranid='%s'"%(database['ranid']))
+        getdb = ASKDB().delete_one('okr_objectives', "ranid='%s'"%(database['ranid']))
+        if (getdb == 30001):
+            return http.send(30001)
         return http.send(10000)
         
