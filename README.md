@@ -13,6 +13,10 @@ passlib
 flask_httpauth
 itsdangerous
 uwsgi
+redis
+flask_sqlalchemy
+flask_wtf
+flask_session
 
 ## configure
 

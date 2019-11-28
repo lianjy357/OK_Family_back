@@ -1,7 +1,5 @@
 # -*- coding:utf-8 -*-
-# http请求之后，对数据进行包装后再发出请求
-from __init__ import Response_headers
-import datetime
+
 import json
 
 CODE = {

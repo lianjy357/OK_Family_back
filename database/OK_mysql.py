@@ -4,7 +4,7 @@ import random
 import string
 from werkzeug.security import generate_password_hash,check_password_hash
 
-from utils import http
+# from utils import http
 
 # 创建表的sql
 # create_sql = """CREATE TABLE IF NOT EXISTS user_deo(
@@ -30,8 +30,7 @@ class ASKDB:
             load_dict = json.load(load_f)
         # 数据库连接
         DBsetting = load_dict['DB']
-        self.db = records.Database('{0}+{1}://{2}:{3}@{4}:{5}/{6}'\
-            .format(DBsetting['DatabaseType'], DBsetting['API'], DBsetting['Username'], DBsetting['Password'], DBsetting['IP'], DBsetting['Port'], DBsetting['DatabaseName']))
+        self.db = records.Database()
     
     '''
         保存数据insert（单条）
@@ -198,7 +197,7 @@ class mydb():
         for o in getdb:
             getkrdb = ASKDB().select_all('*','okr_keyresults', "ranid='%s'"%(o['ranid']))
             o['KR'] = getkrdb
-        return http.send(10000, getdb)
+        return utils.http.send(10000, getdb)
     # 创建OKR信息
     def okr_okr_save(self, database):
         # 单条数据
