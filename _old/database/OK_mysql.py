@@ -30,7 +30,8 @@ class ASKDB:
             load_dict = json.load(load_f)
         # 数据库连接
         DBsetting = load_dict['DB']
-        self.db = records.Database()
+        self.db = records.Database('{0}+{1}://{2}:{3}@{4}:{5}/{6}'\
+            .format(DBsetting['DatabaseType'], DBsetting['API'], DBsetting['Username'], DBsetting['Password'], DBsetting['IP'], DBsetting['Port'], DBsetting['DatabaseName']))
     
     '''
         保存数据insert（单条）

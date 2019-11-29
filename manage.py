@@ -5,11 +5,16 @@ from flask_migrate import Migrate, MigrateCommand # 导入迁移执行者 和 �
 if __name__ == '__main__':
     app = create_app("develop")
 
+    from werkzeug.contrib.fixers import ProxyFix
+    app.wsgi_app = ProxyFix(app.wsgi_app)
+
     # 数据库迁移插件
     manager = Manager(app)
     Migrate(app, db)
     manager.add_command("db", MigrateCommand)
+    manager.run()
 
-    from werkzeug.contrib.fixers import ProxyFix
-    app.wsgi_app = ProxyFix(app.wsgi_app)
-    app.run(debug=True, host='0.0.0.0')
+    # 执行flask
+    
+    # app.run(debug=True, host='0.0.0.0')
+    
