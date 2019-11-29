@@ -17,6 +17,8 @@ redis
 flask_sqlalchemy
 flask_wtf
 flask_session
+flask_script
+flask_migrate
 
 ## configure
 

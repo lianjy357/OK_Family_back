@@ -23,12 +23,16 @@ def create_app(config_name):
 
     # 初始化redis工具
     global redis_store
-    redis_store = redis.StrictRedis((host=config_class.REDIS_HOST, post=config_class.REDIS_POST))
+    redis_store = redis.StrictRedis(host=config_class.REDIS_HOST, port=config_class.REDIS_POST)
 
     # 利用flask_session， 将session数据保存到redis中
     Session(app)
 
     # 为flask补充csrf防护
     CSRFProtect(app)
+
+    # 注册蓝图
+    from . import api
+    app.register_blueprint(api.api, url_prefix="/api/v1")
 
     return app

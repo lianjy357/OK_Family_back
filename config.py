@@ -1,3 +1,4 @@
+import json
 # 配置文件
 
 # 获取配置信息
@@ -7,6 +8,9 @@ DBsetting = load_dict['DB']
 
 class Config(object):
     """配置信息"""
+    # 这个是用于session
+    SECRET_KEY = "abcdefg"
+    
     # 连接records数据库
     SQL_URL = '{0}+{1}://{2}:{3}@{4}:{5}/{6}'\
             .format(DBsetting['DatabaseType'], DBsetting['API'], DBsetting['Username'], DBsetting['Password'], DBsetting['IP'], DBsetting['Port'], DBsetting['DatabaseName'])
@@ -17,7 +21,7 @@ class Config(object):
 
     # flask_session配置
     SESSION_TYPE = "redis"
-    SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, post=REDIS_POST)
+    # SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, post=REDIS_POST)
     SESSION_USE_SIGNER = True # 对cookie中session_id进行隐藏处理
     PERMANENT_SESSION_LIFETIME = 86400 # session数据有效期，单位秒
 
