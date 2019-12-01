@@ -3,4 +3,5 @@
   "files.exclude": {
     "**/__pycache__": true
   },
+  "python.pythonPath": "/Users/lianjy/Documents/dev/OK_Family_back/venv/bin/python3.7",
 }

@@ -398,3 +398,7 @@ INFO _internal.py: 122 127.0.0.1 - - [29/Nov/2019 15:11:47] "GET /api/v1/index H
 INFO _internal.py: 122 127.0.0.1 - - [29/Nov/2019 15:11:48] "GET /api/v1/index HTTP/1.1" 200 -
 INFO _internal.py: 122 127.0.0.1 - - [29/Nov/2019 15:11:48] "GET /api/v1/index HTTP/1.1" 200 -
 INFO _internal.py: 122 127.0.0.1 - - [29/Nov/2019 15:11:48] "GET /api/v1/index HTTP/1.1" 200 -
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330

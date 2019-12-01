@@ -2,6 +2,13 @@
 
 ## python install
 
+### 虚拟环境外
+
+pip install
+virtualenv
+
+### 虚拟环境内(第一版)
+
 pip install
 
 flask
@@ -12,6 +19,20 @@ pymysql
 passlib
 flask_httpauth
 itsdangerous
+uwsgi
+redis
+flask_sqlalchemy
+flask_wtf
+flask_session
+flask_script
+flask_migrate
+
+### 虚拟环境内(第二版)
+
+pip install
+
+flask
+flask_cors
 uwsgi
 redis
 flask_sqlalchemy
@@ -57,3 +78,12 @@ DB：数据库配置
   - `apis.py` 只作为数据接收，只处理一些简单的数据请求问题，将所有逻辑交给
 - `database` 所有的数据库请求
   - `OK_mysql.py` 数据库配置信息
+
+## 运行虚拟环境
+
+创建虚拟环境
+`virtualenv venv`
+启动
+`source venv/bin/activate`
+退出
+`deactivate`
