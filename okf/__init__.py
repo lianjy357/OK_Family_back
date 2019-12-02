@@ -1,7 +1,8 @@
-from flask import Flask
+from flask import Flask,Response
 from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
-from flask_wtf.csrf  import CSRFProtect
+# from flask_wtf.csrf  import CSRFProtect
+from flask_cors import CORS
 import redis
 import logging
 from logging.handlers import RotatingFileHandler
@@ -31,7 +32,10 @@ def create_app(config_name):
     Session(app)
 
     # 为flask补充csrf防护
-    CSRFProtect(app)
+    # CSRFProtect(app)
+
+    # flask跨域
+    CORS(app)
 
     # 注册蓝图
     from . import api
@@ -48,5 +52,10 @@ def create_app(config_name):
     file_log_handler.setFormatter(formatter)
     # 为全局的日志工具独享（flask）添加日志记录器
     logging.getLogger().addHandler(file_log_handler)
+
+    def Response_headers(content):
+        resp = Response(content)
+        resp.headers['Access-Control-Allow-Origin'] = '*'
+        return resp
 
     return app
