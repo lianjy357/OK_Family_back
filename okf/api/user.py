@@ -2,7 +2,7 @@
 # 用户操作的接口
 from . import api # api对象
 
-from okf import redis_store # redis
+# from okf import redis_store # redis
 from flask import request # 请求接收
 from okf.utils.response_code import send # 请求发送
 

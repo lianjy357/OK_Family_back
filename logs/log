@@ -803,3 +803,110 @@ INFO _internal.py: 122  * Restarting with stat
 WARNING _internal.py: 122  * Debugger is active!
 INFO _internal.py: 122  * Debugger PIN: 641-741-227
 INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 21:27:28] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:00:35] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:00:49] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:03:54] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:05] "GET /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:05] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:05] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:05] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:06] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:06] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:04:06] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:37] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:39] "GET /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:39] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:39] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:39] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:40] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:40] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:40] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:41] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:51] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:58] "GET /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:07:59] "GET /api/v1/index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:09:25] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/manage.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:17:25] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:18:08] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:18:22] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/okf/api/user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:19:42] "POST /api/v1/index HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in '/Users/lianjy/Documents/dev/OK_Family_back/config.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:21:11] "POST /api/v1/index HTTP/1.1" 405 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:21:26] "GET /api/v1/index HTTP/1.1" 200 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:21:26] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 22:22:16] "POST /api/v1/register HTTP/1.1" 500 -

@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_session import Session
 # from flask_wtf.csrf  import CSRFProtect
 from flask_cors import CORS
-import redis
+# import redis
 import logging
 from logging.handlers import RotatingFileHandler
 
@@ -25,8 +25,8 @@ def create_app(config_name):
     db.init_app(app)
 
     # 初始化redis工具
-    global redis_store
-    redis_store = redis.StrictRedis(host=config_class.REDIS_HOST, port=config_class.REDIS_POST)
+    # global redis_store
+    # redis_store = redis.StrictRedis(host=config_class.REDIS_HOST, port=config_class.REDIS_POST)
 
     # 利用flask_session， 将session数据保存到redis中
     Session(app)

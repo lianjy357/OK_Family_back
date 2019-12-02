@@ -16,15 +16,15 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = DBsetting['URL']
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
-    # redis数据库配置
-    REDIS_HOST = Redising['REDIS_HOST']
-    REDIS_POST = Redising['REDIS_POST']
+    # # redis数据库配置
+    # REDIS_HOST = Redising['REDIS_HOST']
+    # REDIS_POST = Redising['REDIS_POST']
 
-    # flask_session配置
-    SESSION_TYPE = "redis"
-    # SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, post=REDIS_POST)
-    SESSION_USE_SIGNER = True # 对cookie中session_id进行隐藏处理
-    PERMANENT_SESSION_LIFETIME = 86400 # session数据有效期，单位秒
+    # # flask_session配置
+    # SESSION_TYPE = "redis"
+    # # SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, post=REDIS_POST)
+    # SESSION_USE_SIGNER = True # 对cookie中session_id进行隐藏处理
+    # PERMANENT_SESSION_LIFETIME = 86400 # session数据有效期，单位秒
 
 class DevelopmentConfig(Config):
     """开发环境"""
