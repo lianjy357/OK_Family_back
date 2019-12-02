@@ -84,6 +84,9 @@ DB：数据库配置
 创建虚拟环境
 `virtualenv venv`
 启动
+旧版本需要加source
 `source venv/bin/activate`
+新版本
+`venv/bin/activate`
 退出
 `deactivate`

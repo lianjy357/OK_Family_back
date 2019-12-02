@@ -402,3 +402,7 @@ INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to qui
 INFO _internal.py: 122  * Restarting with stat
 WARNING _internal.py: 122  * Debugger is active!
 INFO _internal.py: 122  * Debugger PIN: 210-248-330
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
