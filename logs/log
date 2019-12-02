@@ -553,3 +553,253 @@ INFO _internal.py: 122  * Restarting with stat
 WARNING _internal.py: 122  * Debugger is active!
 INFO _internal.py: 122  * Debugger PIN: 641-741-227
 INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:30:55] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:32:09] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:37:36] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:39:44] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:41:08] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:42:03] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\manage.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:58:00] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:58:15] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 17:58:28] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:08:18] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:09:03] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:09:10] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:09:16] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:09:31] "POST /api/v1/register?userName=15 HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:09:58] "POST /api/v1/register?userName=15 HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:10:16] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:10:26] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:10:44] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122 127.0.0.1 - - [02/Dec/2019 18:10:54] "POST /api/v1/register HTTP/1.1" 500 -
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\manage.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\manage.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\utils\\response_code.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\__init__.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\manage.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 122  * Detected change in 'E:\\test\\OK_Family_back\\okf\\api\\user.py', reloading
+INFO _internal.py: 122  * Restarting with stat
+WARNING _internal.py: 122  * Debugger is active!
+INFO _internal.py: 122  * Debugger PIN: 641-741-227
+INFO _internal.py: 122  * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)

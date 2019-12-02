@@ -10,9 +10,10 @@ from okf.utils.response_code import send # 请求发送
 @api.route('/register', methods=['POST'])
 def register():
     '''注册'''
-    print('进入等等')
     # 获取参数
     req_dict = request.get_json()
+    print('进入等等')
+    print(req_dict)
     userName = req_dict.get('userName')
     password = req_dict.get('password')
     helloCode = req_dict.get('helloCode')
