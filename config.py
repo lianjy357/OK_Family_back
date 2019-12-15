@@ -13,8 +13,8 @@ class Config(object):
     SECRET_KEY = "abcdefg"
 
     # 连接SQLALCHEMY数据库
-    SQLALCHEMY_DATABASE_URI = DBsetting['URL']
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
+    SQLALCHEMY_DATABASE_URI = DBsetting['URL'] # 数据库连接字符串
+    SQLALCHEMY_TRACK_MODIFICATIONS = True # 数据库日志跟踪
 
     # # redis数据库配置
     # REDIS_HOST = Redising['REDIS_HOST']

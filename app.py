@@ -9,12 +9,10 @@ if __name__ == '__main__':
     app.wsgi_app = ProxyFix(app.wsgi_app)
 
     # 数据库迁移插件
-    manager = Manager(app)
-    Migrate(app, db)
-    manager.add_command("db", MigrateCommand)
-    manager.run()
+    # manager = Manager(app)
+    # Migrate(app, db)
+    # manager.add_command("db", MigrateCommand)
+    # manager.run()
 
     # 执行flask
-    
-    # app.run(debug=True, host='0.0.0.0')
-    
+    app.run(host='0.0.0.0')

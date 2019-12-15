@@ -3,5 +3,5 @@
   "files.exclude": {
     "**/__pycache__": true
   },
-  "python.pythonPath": "C:\\Users\\yixue\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe",
+  "python.pythonPath": "venv/bin/python",
 }

@@ -22,6 +22,7 @@ def create_app(config_name):
     config_class = config_map.get(config_name)
     app.config.from_object(config_class)
     
+    # 导入数据
     db.init_app(app)
 
     # 初始化redis工具

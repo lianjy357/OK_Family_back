@@ -35,6 +35,8 @@ flask
 flask_cors
 uwsgi
 redis
+pymysql
+mysqlclient
 flask_sqlalchemy
 flask_wtf
 flask_session

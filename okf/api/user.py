@@ -12,7 +12,6 @@ def register():
     '''注册'''
     # 获取参数
     req_dict = request.get_json()
-    print('进入等等')
     print(req_dict)
     userName = req_dict.get('userName')
     password = req_dict.get('password')
