@@ -20,6 +20,7 @@ class User(BaseModel, db.Model):
 
     # 设置表的字段（类变量）
     id = db.Column(db.Integer, primary_key=True) # 用户编号
+    email = db.Column(db.String(128), nullable=False) # 用户邮箱
     username = db.Column(db.String(32), unique=True, nullable=False) # 用户昵称
     password = db.Column(db.String(128), nullable=False) # 加密密码
     avatar_url = db.Column(db.String(128)) # 用户头像

@@ -14,14 +14,13 @@ def register():
     # 获取参数
     req_dict = request.get_json()
     print(req_dict)
+    email = req_dict.get('email')
     userName = req_dict.get('userName')
     password = req_dict.get('password')
     helloCode = req_dict.get('helloCode')
     # 效验参数
-    if not all([userName, password, helloCode]):
+    if not all([email, userName, password, helloCode]):
         return send(20001)
-    if helloCode != '111111':
-        return send(20101)
     # 数据操作
-    return user.register(userName, password)
+    return user.register(email, userName, password, helloCode)
     
