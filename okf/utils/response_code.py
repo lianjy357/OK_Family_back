@@ -8,6 +8,7 @@
 02：具体错误代码
 """
 from flask import Response
+import datetime
 import json
 
 CODE = {
@@ -29,7 +30,7 @@ CODE = {
 # 时间处理
 class DateEncoder(json.JSONEncoder):
     def default(self, obj):
-        if isinstance(obj,datetime.date):
+        if isinstance(obj, datetime.date):
             return obj.strftime("%Y-%m-%d")
         else:
             return json.JSONEncoder.default(self,obj)

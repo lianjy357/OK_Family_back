@@ -4,6 +4,7 @@ from . import api # api对象
 
 # from okf import redis_store # redis
 from flask import request # 请求接收
+from okf.handle import user # 调用处理函数
 from okf.utils.response_code import send # 请求发送
 
 
@@ -19,4 +20,8 @@ def register():
     # 效验参数
     if not all([userName, password, helloCode]):
         return send(20001)
-    return send(10000)
+    if helloCode != '111111':
+        return send(20101)
+    # 数据操作
+    return user.register(userName, password)
+    
