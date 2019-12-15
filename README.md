@@ -92,3 +92,8 @@ DB：数据库配置
 `venv/bin/activate`
 退出
 `deactivate`
+
+## 更新数据库操作方法
+
+python app.py db migrate
+python app.py db upgrade
